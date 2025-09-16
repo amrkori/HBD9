@@ -19,12 +19,18 @@ function App() {
   const audioRef = useRef<HTMLAudioElement>(null);
   
   // Set your monthsary date here (year, month[0-11], day)
-  const monthsaryDate = new Date(2025, 9, 22); // February 14, 2025 (Valentine's Day)
+  const monthsaryDate = new Date(2026, 8, 22); // February 14, 2025 (Valentine's Day)
   const timeLeft = useCountdown(monthsaryDate);
 
-  const handleStart = () => {
-    setShowReasons(true);
-  };
+const handleStart = () => {
+  setShowReasons(true);
+
+  // تشغيل الموسيقى مباشرة
+  if (audioRef.current) {
+    audioRef.current.play().catch(console.error); // .catch عشان نتجنب أي خطأ لو المتصفح منع التشغيل التلقائي
+    setIsMusicPlaying(true);
+  }
+};
 
   const handleReasonChange = (newIndex: number) => {
     setIsAnimating(true);
@@ -130,7 +136,9 @@ function App() {
         loop
         preload="metadata"
       >
-        <source src="/music/love-song.mp3" type="audio/mpeg" />
+        <source src="music\10_-_Men_Gherak.mp3" type="audio/mpeg" />
+
+        {/* يمكنك تغيير اسم الملف هنا إذا كان مختلف */}
       </audio>
     </div>
   );
