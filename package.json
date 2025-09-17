@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://amrkori.github.io/HBD9",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -12,7 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "homepage":"http://amrkory.github.io/why-i-love-you",
+    "homepage":"http://amrkori.github.io/HBD9",
     "@fontsource/dancing-script": "^5.2.6",
     "@fontsource/poppins": "^5.2.6",
     "lucide-react": "^0.344.0",

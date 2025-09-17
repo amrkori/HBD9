@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@fontsource/dancing-script/400.css';
 @import '@fontsource/dancing-script/700.css';
 @import '@fontsource/poppins/300.css';
 @import '@fontsource/poppins/400.css';
@@ -13,9 +12,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.romantic-font {
-  font-family: 'Dancing Script', cursive;
-}
+
 
 @layer utilities {
   .animate-fade-in {
